@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Note</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="notes">
+        <div class="create">
+          <div id="create">
+            <i class="fa-solid fa-plus"></i>
+            <div class="createBox">
+              <div class="innerCreateBox">
+                <textarea
+                  placeholder="Write here . . . "
+                  id="userInput"
+                  maxlength="160"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let createBox = document.getElementsByClassName("createBox")[0];
+      let notes = document.getElementsByClassName("notes")[0];
+      let input = document.getElementById("userInput");
+
+      createBox.addEventListener("keydown", content);
+
+      document.getElementById("create").addEventListener("click", function () {
+        createBox.style.display = "block";
+      });
+
+      function randomColor() {
+        //Generate random values from 0 to 255 for three color components: red, green and blue
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+
+        //Generate hex color string from color components
+        var color =
+          "#" + red.toString(16) + green.toString(16) + blue.toString(16);
+
+        return color;
+      }
+
+      function content(e) {
+        if (e.keyCode == "13") {
+          divStyle(input.value);
+          input.value = "";
+          createBox.style.display = "none";
+        }
+      }
+
+      function content(e) {
+        if (e.keyCode == 13 && e.shiftKey) {
+          //Do nothing if "Shift" + "Enter" key combination is pressed
+          return;
+        } else if (e.keyCode == 13) {
+          divStyle(input.value.replace(/\n/g, "<br>")); // Replace newline character with <br>  tag
+          input.value = "";
+          createBox.style.display = "none";
+        }
+      }
+      
+      function divStyle(text) {
+        let div = document.createElement("div");
+        div.className = "note";
+        div.innerHTML = '<div class="details">' + "<h3>" + text + "</h3>" + "</div>";
+      
+        //remove note on 2 click
+        div.addEventListener("dblclick", function () {
+          div.remove();
+        });
+      
+        //fill random colors in note
+        div.setAttribute("style", "background:" + randomColor() + "");
+      
+        notes.appendChild(div);
+      }
+      
+    </script>
+  </body>
+</html>
