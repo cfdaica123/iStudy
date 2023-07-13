@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Handlee& display-swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+  font-family: "Handlee", cursive;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #b81bab, rgb(81, 179, 81), #31d5eb);
+}
+.container {
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .box {
+  position: relative;
+  width: 420px;
+  background: azure;
+  padding: 20px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.container .box h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.container .box #grocery {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.container .box #grocery input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+}
+.container .box #grocery button {
+  background: #4bae4f;
+  color: aliceblue;
+  min-width: 100px;
+  font-weight: 500;
+  border: 1px solid #333;
+  cursor: pointer;
+  outline: none;
+}
+.container ol {
+  position: relative;
+  padding: 10px 20px 10px 40px;
+  width: 100%;
+  min-height: 400px;
+  background: aliceblue
+    repeating-linear-gradient(
+      transparent 0%,
+      transparent 99%,
+      #000 99%,
+      #000 100%
+    );
+  background-size: 55px 55px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+.container ol li {
+  position: relative;
+  font-size: 1.5em;
+  height: 55px;
+}
+.container ol li .remove {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(230, 13, 13);
+  border-radius: 50%;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container ol li .remove::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  background-color: white;
+}
+.container ol li.done p {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.2);
+}
+.container ol li.done p::after {
+  content: "✔";
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(35, 202, 30);
+  border-radius: 50%;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery List App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2>Grocery List</h2>
+        <form id="grocery">
+          <input
+            type="text"
+            id="writeList"
+            placeholder="Grocery Item . . ."
+            required
+            oninput="capitalizeFirstLetter()"
+          />
+
+          <button>Add Item</button>
+        </form>
+      </div>
+      <ol></ol>
+    </div>
+    <script>
+      let grocery = document.getElementById("grocery");
+      grocery.addEventListener("submit", addItem);
+      function addItem(e) {
+        e.preventDefault();
+        let data = this.elements.writeList.value;
+        let list = document.querySelector("ol");
+        let item = document.createElement("li");
+        let text = document.createElement("p");
+
+        text.textContent = data;
+        this.elements.writeList.value = "";
+        item.append(text);
+        list.append(item);
+
+        let rmvBtn = document.createElement("span");
+        rmvBtn.classList.add("remove");
+        item.append(rmvBtn);
+        rmvBtn.addEventListener("click", deleteItem);
+        item.addEventListener("click", doneItem);
+      }
+
+      function deleteItem(e) {
+        this.parentElement.remove();
+      }
+
+      function doneItem(e) {
+        this.classList.toggle("done");
+      }
+
+      function capitalizeFirstLetter() {
+        let input = document.getElementById("writeList");
+        let value = input.value;
+
+        // Check that the input value is not empty
+        if (value.length > 0) {
+          // Split each word in the string
+          let words = value.split(" ");
+
+          // Convert the first letter of the first word to uppercase
+          words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+
+          // Reassign the input value to the edited word
+          input.value = words.join(" ");
+        }
+      }
+    </script>
+  </body>
+</html>
