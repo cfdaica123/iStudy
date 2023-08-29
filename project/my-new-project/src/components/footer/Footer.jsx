@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
 import "./footer.css";
-import video2 from "../../../Assets/video (2).mp4";
+import video2 from "../../Assets/video (2).mp4";
 import { FiSend } from "react-icons/fi";
 import { MdTravelExplore } from "react-icons/md";
 import { BiLogoFacebookCircle } from "react-icons/bi";

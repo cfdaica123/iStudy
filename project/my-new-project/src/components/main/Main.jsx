@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "./main.css";
 import { GrLocation } from "react-icons/gr";
 import { BsClipboardCheck } from "react-icons/bs";
-import img from "../../../Assets/img (1).jpg";
+import img from "../../Assets/img (1).jpg";
 
 import Aos from "aos";
 import "aos/dist/aos.css";

@@ -1,18 +1,18 @@
 import React from 'react';
 import './app.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import HomeComponent from './views/pages/HomeComponent';
-import AdminComponent from './views/admin/AdminComponent';
-import LoginAdmin from './views/auth/LoginAdmin';
-import Login from './views/auth/Login';
-import Register from './views/auth/Register';
+import index from './components';
+import admin from './admin/Admin';
+import LoginAdmin from './auth/admins/Login';
+import Login from './auth/users/Login';
+import Register from './auth/users/Register';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={HomeComponent} />
-        <Route path="/admin" component={AdminComponent} />
+        <Route path="/" exact component={index} />
+        <Route path="/admin" component={admin} />
         <Route path="/login-admin" component={LoginAdmin} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
