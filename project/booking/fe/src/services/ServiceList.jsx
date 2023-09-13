@@ -30,7 +30,7 @@ const ServiceList = () => {
   return (
     <>
       {servicesData.map((item, index) => (
-        <Col lg="3" key={index}>
+        <Col lg="3" key={index} data-aos="fade-up">
           <ServiceCard item={item} />
         </Col>
       ))}
