@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 import "../styles/thank-you.css";
 const ThankYou = () => {
@@ -8,7 +9,7 @@ const ThankYou = () => {
     <section>
       <Container>
         <Row>
-          <Col lg="12" className="pt-5 text-center">
+          <Col lg="12" className="pt-5 text-center animate__animated animate__heartBeat">
             <div className="thank__you">
               <span>
                 <i class="ri-checkbox-circle-line"></i>

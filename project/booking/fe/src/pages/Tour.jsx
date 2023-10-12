@@ -20,7 +20,7 @@ const Tour = () => {
   return (
     <>
       <CommonSection title={"All Tours"} />
-      <section>
+      <section data-aos="fade-up">
         <Container>
           <Row>
             <SearchBar />
@@ -28,7 +28,7 @@ const Tour = () => {
         </Container>
       </section>
 
-      <section className="pt-0">
+      <section className="pt-0" data-aos="fade-down">
         <Container>
           <Row>
             {touData?.map((tour) => (
