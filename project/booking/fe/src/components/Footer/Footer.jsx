@@ -38,6 +38,7 @@ const quick__links02 = [
 
 const Footer = () => {
   const year = new Date().getFullYear();
+
   return (
     <footer className="footer" data-aos="fade-down">
       <Container>
@@ -129,13 +130,15 @@ const Footer = () => {
                   </span>
                   Phone:
                 </h6>
-                <p className="mb-0">+84 968224048</p>
+                <p className="mb-0">(+84) 968224048</p>
               </ListGroupItem>
             </ListGroup>
           </Col>
 
           <Col lg="12" className="text-center pt-5">
-            <p className="copyright">© Your Company. All rights reserved {year}</p>
+            <p className="copyright">
+              © Your Company. All rights reserved {year}
+            </p>
           </Col>
         </Row>
       </Container>
