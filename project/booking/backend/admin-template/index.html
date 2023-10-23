@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="page.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <a href="#" class="logo">
+        <img src="./logo.png" alt="" />
+      </a>
+
+      <ul class="side__menu top">
+        <li class="active">
+          <a href="index.html" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="page.html" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Page</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="side__menu">
+        <li>
+          <a href="#">
+            <ion-icon name="settings-outline"></ion-icon>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="logout">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <nav>
+        <a href="#" class="nav__link">Categories</a>
+
+        <form action="#">
+          <div class="form__input">
+            <input type="search" placeholder="search..." name="" id="" />
+            <button class="search-button">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+        </form>
+
+        <a href="#" class="notification" id="notificationButton">
+          <ion-icon name="notifications-outline"></ion-icon>
+          <span class="num" id="notificationCount">2</span>
+          <div class="notification-popup" id="notificationPopup">
+            <!-- Nội dung của popup nếu có -->
+            <div class="content">
+              <img src="./ava-02.jpg" alt="" />
+              <h3>Son</h3>
+              <p>Đã đặt phòng</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- <button type="submit" id="addNotification">add</button> -->
+
+        <a href="#" class="profile">
+          <img src="./ava-02.jpg" alt="" />
+        </a>
+      </nav>
+
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Admin Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Admin</a>
+              </li>
+              <i class="fas fa-chevron-right"></i>
+              <li>
+                <a href="#" class="active">Home</a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" class="download-btn">
+            <i class="fas fa-cloud-download-alt"></i>
+            <span class="text">Download Report</span>
+          </a>
+        </div>
+
+        <div class="box-info">
+          <li>
+            <i class="fas fa-calendar-check"></i>
+            <span class="text">
+              <h3>1.5K</h3>
+              <p>New Orders</p>
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-people-group"></i>
+            <span class="text">
+              <h3>1M</h3>
+              <p>Clients</p>
+            </span>
+          </li>
+          <li>
+            <i class="fas fa-dollar-sign"></i>
+            <span class="text">
+              <h3>$900k</h3>
+              <p>Turnover</p>
+            </span>
+          </li>
+        </div>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Recent Orders</h3>
+              <i class="fas fa-search"></i>
+              <i class="fas fa-filter"></i>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Order Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="profile.png" alt="" />
+                    <p>User Name</p>
+                  </td>
+                  <td>07-05-2023</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="profile.png" alt="" />
+                    <p>User Name</p>
+                  </td>
+                  <td>07-05-2023</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="profile.png" alt="" />
+                    <p>User Name</p>
+                  </td>
+                  <td>07-05-2023</td>
+                  <td><span class="status process">Process</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="profile.png" alt="" />
+                    <p>User Name</p>
+                  </td>
+                  <td>07-05-2023</td>
+                  <td><span class="status process">Process</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="profile.png" alt="" />
+                    <p>User Name</p>
+                  </td>
+                  <td>07-05-2023</td>
+                  <td><span class="status complete">Complete</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="todo">
+            <div class="head">
+              <h3>Todos</h3>
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-filter"></i>
+            </div>
+
+            <ul class="todo-list">
+              <li class="not-completed">
+                <p>Todo List</p>
+                <i class="fas fa-ellipsis-vertical"></i>
+              </li>
+              <li class="not-completed">
+                <p>Todo List</p>
+                <i class="fas fa-ellipsis-vertical"></i>
+              </li>
+              <li class="completed">
+                <p>Todo List</p>
+                <i class="fas fa-ellipsis-vertical"></i>
+              </li>
+              <li class="completed">
+                <p>Todo List</p>
+                <i class="fas fa-ellipsis-vertical"></i>
+              </li>
+              <li class="completed">
+                <p>Todo List</p>
+                <i class="fas fa-ellipsis-vertical"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script src="./app.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="page.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <a href="#" class="logo">
+        <img src="./logo.png" alt="" />
+      </a>
+
+      <ul class="side__menu top">
+        <li class="active">
+          <a href="index.html" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Page</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="nav__link">
+            <ion-icon name="grid-outline"></ion-icon>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="side__menu">
+        <li>
+          <a href="#">
+            <ion-icon name="settings-outline"></ion-icon>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="logout">
+            <ion-icon name="log-out-outline"></ion-icon>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content">
+      <nav>
+        <a href="#" class="nav__link">Categories</a>
+
+        <form action="#">
+          <div class="form__input">
+            <input type="search" placeholder="search..." name="" id="" />
+            <button class="search-button">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+        </form>
+
+        <a href="#" class="notification" id="notificationButton">
+          <ion-icon name="notifications-outline"></ion-icon>
+          <span class="num" id="notificationCount">2</span>
+          <div class="notification-popup" id="notificationPopup">
+            <!-- Nội dung của popup nếu có -->
+            <div class="content">
+              <img src="./ava-02.jpg" alt="" />
+              <h3>Son</h3>
+              <p>Đã đặt phòng</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- <button type="submit" id="addNotification">add</button> -->
+
+        <a href="#" class="profile">
+          <img src="./ava-02.jpg" alt="" />
+        </a>
+      </nav>
+
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Admin Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Admin</a>
+              </li>
+              <i class="fas fa-chevron-right"></i>
+              <li>
+                <a href="#" class="act">Page</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="table" id="table_export">
+          <div class="table__header">
+            <h1>Customer order</h1>
+
+            <div class="input-group">
+              <input type="search" placeholder="Search data . . . " />
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+
+            <div class="button-group">
+              <div class="btn__add" title="Add to table">
+                <label>
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                  <input type="button" style="display: none" />
+                </label>
+              </div>
+
+              <div class="export__file" title="Export File">
+                <label for="export-file" class="export__file-btn">
+                  <ion-icon name="download-outline"></ion-icon>
+                </label>
+                <input type="checkbox" name="" id="export-file" />
+                <div class="export__file-options">
+                  <label>Export As &nbsp; &#10140;</label>
+                  <label for="export-file" id="toPDF">
+                    PDF
+                    <img src="./export-img/pdf.png" alt="" />
+                  </label>
+
+                  <label for="export-file" id="toJSON">
+                    JSON
+                    <img src="./export-img/json.png" alt="" />
+                  </label>
+
+                  <label for="export-file" id="toCSV">
+                    CSV
+                    <img src="./export-img/csv.png" alt="" />
+                  </label>
+
+                  <label for="export-file" id="toEXCEL">
+                    EXCEL
+                    <img src="./export-img/excel.png" alt="" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="table__body">
+            <table>
+              <thead>
+                <tr>
+                  <th>id</th>
+                  <th>Customer</th>
+                  <th>Status Account</th>
+                  <th>Location</th>
+                  <th>Order Date</th>
+                  <th>Status Room</th>
+                  <th>Amount</th>
+                  <th>Act</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    Tuan
+                  </td>
+                  <td>
+                    <div class="status-account active"></div>
+                    <span class="status-text active-text">Active</span>
+                  </td>
+                  <td>VietNam</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room booked">Booked</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    An
+                  </td>
+                  <td>
+                    <div class="status-account inactive"></div>
+                    <span class="status-text inactive-text">Inactive</span>
+                  </td>
+                  <td>USA</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room confirmed">Confirmed</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    Anh
+                  </td>
+                  <td>
+                    <div class="status-account locked"></div>
+                    <span class="status-text locked-text">Locked</span>
+                  </td>
+                  <td>UK</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room processing">Processing</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    Thi
+                  </td>
+                  <td>
+                    <div class="status-account pending"></div>
+                    <span class="status-text pending-text">Pending</span>
+                  </td>
+                  <td>China</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room completed">Completed</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    John
+                  </td>
+                  <td>
+                    <div class="status-account blocked"></div>
+                    <span class="status-text blocked-text">Blocked</span>
+                  </td>
+                  <td>VietNam</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room cancelled">Cancelled</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    Alex
+                  </td>
+                  <td>
+                    <div class="status-account deleted"></div>
+                    <span class="status-text deleted-text">Deleted</span>
+                  </td>
+                  <td>Japan</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room cancelled">Cancelled</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    Thi Ca
+                  </td>
+                  <td>
+                    <div class="status-account deleted"></div>
+                    <span class="status-text deleted-text">Deleted</span>
+                  </td>
+                  <td>USA</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room cancelled">Cancelled</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>
+                    <img src="./ava-02.jpg" alt="" />
+                    Son
+                  </td>
+                  <td>
+                    <div class="status-account deleted"></div>
+                    <span class="status-text deleted-text">Deleted</span>
+                  </td>
+                  <td>VietNam</td>
+                  <td>17 Dec, 2023</td>
+                  <td>
+                    <p class="status-room cancelled">Cancelled</p>
+                  </td>
+                  <td><strong>$1000</strong></td>
+                  <td class="button-container">
+                    <button href="" class="edit">
+                      <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                    <button href="" class="delete">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination">
+            <button class="pagination-button" disabled>Previous</button>
+            <span class="pagination-info">1 / 99</span>
+            <button class="pagination-button">Next</button>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <script src="./app.js"></script>
+    <script src="./table.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

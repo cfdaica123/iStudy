@@ -1,0 +1,452 @@
+.content main {
+  width: 100%;
+  padding: 36px 24px;
+  font-family: var(--poppins);
+  color: var(--text-color);
+  max-height: calc(100vh - 56px);
+  overflow: hidden;
+  background: var(--grey-color);
+  border-top-left-radius: 50px;
+}
+
+.content main .head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.content main .head-title .left h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.content main .head-title .left .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.content main .head-title .left .breadcrumb i {
+  color: var(--text-color);
+}
+
+.content main .head-title .left .breadcrumb li a {
+  color: var(--text-color-grey);
+  pointer-events: none;
+}
+
+.content main .head-title .left .breadcrumb li a.act {
+  color: var(--blue);
+  pointer-events: unset;
+}
+
+.content main .table {
+  margin-top: 30px;
+  width: 100%;
+  height: 75vh;
+  background: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.table__header {
+  width: 100%;
+  height: 10%;
+  background: rgba(233, 153, 4, 0.267);
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table__header h1 {
+  font-size: 30px;
+}
+
+.table__header .input-group {
+  width: 35%;
+  height: 100%;
+  background: #fff5;
+  padding: 0 0.8rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table__header .input-group:hover {
+  width: 40%;
+  background: #fff7;
+  box-shadow: 0 0.1rem 0.4rem #0002;
+}
+
+.table__header .input-group ion-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.table__header .input-group input {
+  width: 100%;
+  font-size: 15px;
+  padding: 0 0.5rem 0 0.3rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.table__body table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(80% - 1.6em);
+  background: #fffb;
+  margin: 0.8rem auto;
+  border-radius: 1rem;
+  overflow: auto;
+}
+
+.table__body::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.table__body img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: var(--light-orange);
+  z-index: 1;
+
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+  background: #05308015;
+}
+
+tbody tr {
+  --delay: 0.1s;
+  transition: 0.5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%) scaleY(0);
+}
+
+tbody tr.hide:hover {
+  background: transparent;
+}
+
+tbody tr:hover {
+  background: rgba(172, 112, 137, 0.692) !important;
+}
+
+/* Hiệu ứng chuyển động cho các phần tử trong cell */
+tbody tr td,
+tbody tr td strong,
+tbody tr td div,
+tbody tr td span,
+tbody tr td a button,
+tbody tr td a button ion-icon,
+tbody tr td p,
+tbody tr td img {
+  transition: 0.2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td strong,
+tbody tr.hide td div,
+tbody tr.hide td span,
+tbody tr.hide td button,
+tbody tr.hide td button ion-icon,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+.status-room {
+  padding: 0.4rem 0;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.booked {
+  background-color: #f3f781;
+  color: #006400;
+}
+
+.confirmed {
+  background-color: #add8e6;
+  color: #000080;
+}
+
+.processing {
+  background-color: #ffdab9;
+  color: #ff4500;
+}
+
+.completed {
+  background-color: #98fb98;
+  color: #008000;
+}
+
+.cancelled {
+  background-color: #ff8080;
+  color: #8b0000;
+}
+
+.status-account {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.active {
+  background-color: #f3f781;
+}
+
+.inactive {
+  background-color: #add8e6;
+}
+
+.locked {
+  background-color: #ffdab9;
+}
+
+.pending {
+  background-color: #98fb98;
+}
+
+.blocked {
+  background-color: #ff6347;
+}
+
+.deleted {
+  background-color: #c0c0c0;
+}
+
+.status-text {
+  display: inline-block;
+}
+
+.active-text {
+  color: #006400;
+}
+
+.inactive-text {
+  color: #000080;
+}
+
+.locked-text {
+  color: #ff4500;
+}
+
+.pending-text {
+  color: #008000;
+}
+
+.blocked-text {
+  color: #8b0000;
+}
+
+.deleted-text {
+  color: #696969;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.pagination-button {
+  padding: 8px 12px;
+  margin: 0 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 14px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-container button {
+  font-size: 25px;
+  padding: 5px;
+  margin-right: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container button.edit {
+  background-color: #2196f3;
+}
+
+.button-container button.delete {
+  background-color: #f44336;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.btn__add label,
+.export__file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  background: #fff4;
+}
+
+.btn__add label ion-icon,
+.export__file-btn ion-icon {
+  font-size: 25px;
+}
+
+.btn__add label:hover {
+  background: #4caf50;
+  color: #fff;
+  transform: scale(1.15);
+}
+
+.export__file-btn:hover {
+  background: #ff2290;
+  color: #fff;
+  transform: scale(1.15);
+}
+.export__file {
+  position: relative;
+}
+.export__file input {
+  display: none;
+}
+.export__file .export__file-options {
+  margin-top: 7px;
+  margin-right: 7px;
+  position: absolute;
+  right: 0;
+
+  width: 12rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: top right;
+
+  box-shadow: 0 0.2rem 0.5rem #0004;
+
+  transition: 0.2s;
+}
+.export__file input:checked + .export__file-options {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 100;
+}
+.export__file .export__file-options label {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0;
+  background: #f2f2f2;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.export__file .export__file-options label:first-of-type {
+  padding: 1rem 0;
+  background-color: #86e49d !important;
+}
+.export__file .export__file-options label:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+  cursor: pointer;
+}
+.export__file .export__file-options img {
+  width: 2rem;
+  height: auto;
+}
