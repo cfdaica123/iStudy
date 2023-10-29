@@ -15,10 +15,18 @@ class DatabaseSeeder extends Seeder
         $this->call(CreatePermissionsTableSeeder::class);
         $this->call(RolesTableSeeder::class);
         $this->call(RolePermissionsTableSeeder::class);
-        $this->call(AccountForAdministrators::class);
+        $this->call(CreateAccount::class);
         $this->call(DepartmentsTableSeeder::class);
         $this->call(EmployeesTableSeeder::class);
+        $this->call(CustomerTableSeeder::class);
         $this->call(BookingStatusesTableSeeder::class);
         $this->call(RoomTypesSeeder::class);
+        $this->call(CategoriesSeeder::class);
+        $this->call(HotelSeeder::class);
+        $this->call(TourSeeder::class);
+
+
+
+        // $this->call(RoomCategoriesSeeder::class);
     }
 }

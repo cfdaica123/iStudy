@@ -20,8 +20,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->unsignedBigInteger('user_status_id');
             $table->foreign('user_status_id')->references('user_status_id')->on('user_statuses');
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')->references('role_id')->on('roles');
             $table->timestamps();
         });
+
     }
 
     /**

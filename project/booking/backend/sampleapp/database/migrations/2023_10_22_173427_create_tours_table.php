@@ -15,6 +15,7 @@ class CreateToursTable extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->bigIncrements('tour_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('title');
             $table->string('city');
             $table->string('address');
@@ -24,11 +25,14 @@ class CreateToursTable extends Migration
             $table->decimal('price', 10, 2);
             $table->integer('max_group_size');
             $table->text('description');
-            $table->unsignedBigInteger('cover_image_id')->nullable();
+            $table->string('cover_image')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();
+        
+            $table->foreign('category_id')->references('category_id')->on('categories')->onDelete('cascade');
         });
     }
+
 
     /**
      * Reverse the migrations.

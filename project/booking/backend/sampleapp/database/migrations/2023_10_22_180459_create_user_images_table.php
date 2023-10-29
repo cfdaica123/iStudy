@@ -18,11 +18,10 @@ class CreateUserImagesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('image_path');
             $table->timestamps();
-        
-            // Định nghĩa ràng buộc khóa ngoại
+
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
-        
+
     }
 
     /**

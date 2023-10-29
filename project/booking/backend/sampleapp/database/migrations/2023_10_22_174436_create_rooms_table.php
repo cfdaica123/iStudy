@@ -17,10 +17,12 @@ class CreateRoomsTable extends Migration
             $table->bigIncrements('room_id');
             $table->unsignedBigInteger('hotel_id');
             $table->unsignedBigInteger('room_type_id');
+            // $table->unsignedBigInteger('category_id')->nullable();
             $table->decimal('price_per_night', 10, 2);
             $table->boolean('available');
             $table->timestamps();
 
+            // $table->foreign('category_id')->references('category_id')->on('room_categories')->onDelete('set null');
             $table->foreign('hotel_id')->references('hotel_id')->on('hotels')->onDelete('cascade');
             $table->foreign('room_type_id')->references('room_type_id')->on('room_types');
         });

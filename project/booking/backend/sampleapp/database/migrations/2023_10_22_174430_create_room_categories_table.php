@@ -13,12 +13,12 @@ class CreateRoomCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('room_categories', function (Blueprint $table) {
-            $table->bigIncrements('category_id');
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->timestamps();
-        });
+        // Schema::create('room_categories', function (Blueprint $table) {
+        //     $table->bigIncrements('category_id');
+        //     $table->string('name');
+        //     $table->text('description')->nullable();
+        //     $table->timestamps();
+        // });
     }
 
     /**
