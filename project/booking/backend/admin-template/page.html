@@ -130,11 +130,17 @@
             </div>
 
             <div class="button-group">
-              <div class="btn__add" title="Add to table">
+
+              <div class="btn__add" title="Add to table" onclick="showForm()">
                 <label>
                   <ion-icon name="add-circle-outline"></ion-icon>
                   <input type="button" style="display: none" />
                 </label>
+              </div>
+              <div class="form-container" style="display: none;">
+                <input type="text" placeholder="Enter something..." />
+                <button type="submit">add</button>
+                <button onclick="cancelForm()">Cancel</button>
               </div>
 
               <div class="export__file" title="Export File">
@@ -396,6 +402,24 @@
         </section>
       </main>
     </section>
+    <script>
+      function showForm() {
+        // Ẩn .btn__add
+        document.querySelector('.btn__add').style.display = 'none';
+        
+        // Hiển thị .form-container
+        document.querySelector('.form-container').style.display = 'flex'; // hoặc block, tùy thuộc vào CSS của bạn
+      }
+      
+      function cancelForm() {
+        // Hiển thị lại .btn__add
+        document.querySelector('.btn__add').style.display = 'flex'; // hoặc block, tùy thuộc vào CSS của bạn
+        
+        // Ẩn .form-container
+        document.querySelector('.form-container').style.display = 'none';
+      }
+      
+    </script>
 
     <script src="./app.js"></script>
     <script src="./table.js"></script>

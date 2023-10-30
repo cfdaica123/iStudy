@@ -70,7 +70,7 @@
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
-                @if (Auth::check())
+                @auth
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Logout ({{ Auth::user()->username }})
@@ -86,32 +86,31 @@
                         <a href="{{ route('register') }}">Register</a>
                     @endif
                 @endauth
-        </div>
-
-    @endif
-
-    <div class="content">
-        <div class="title m-b-md">
-            Laravel
-        </div>
-
-        <div class="links">
-            <a href="{{ url('/booking_statuses') }}">Booking Status</a>
-            <a href="{{ url('/permissions') }}">Permission</a>
-            <a href="{{ url('/user_statuses') }}">User Status</a>
-            <a href="{{ url('/roles') }}">role</a>
-            <a href="{{ url('/departments') }}">departments</a>
-            <a href="{{ url('/room_types') }}">room_types</a>
-            <a href="{{ url('/hotels') }}">hotels</a>
-            <a href="{{ url('/categories') }}">categories</a>
-            {{-- <a href="{{ url('/role_permissions') }}">role_permissions</a> --}}
-            <a href="{{ url('/users') }}">users</a>
-            <a href="{{ url('/tours') }}">tours</a>
+            </div>
+        @endif
 
 
+        <div class="content">
+
+            <div class="title m-b-md">
+                Laravel
+            </div>
+
+            <div class="links">
+                <a href="{{ url('/booking_statuses') }}">Booking Status</a>
+                <a href="{{ url('/permissions') }}">Permission</a>
+                <a href="{{ url('/user_statuses') }}">User Status</a>
+                <a href="{{ url('/roles') }}">role</a>
+                <a href="{{ url('/departments') }}">departments</a>
+                <a href="{{ url('/room_types') }}">room_types</a>
+                <a href="{{ url('/hotels') }}">hotels</a>
+                <a href="{{ url('/categories') }}">categories</a>
+                <a href="{{ url('/role_permissions') }}">role_permissions</a>
+                <a href="{{ url('/users') }}">users</a>
+                <a href="{{ url('/tours') }}">tours</a>
+            </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
